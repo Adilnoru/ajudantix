@@ -20,10 +20,10 @@
 - [x] devolve o subsídio de férias diário
 
 ## Calcular o subsídio de férias
-- [ ] recebe um subsídio de férias diário
-- [ ] dá erro se o subsídio de férias diário não for um número
-- [ ] dá erro se o subsídio de férias diário for não-positivo
-- [ ] recebe uns dias de férias
-- [ ] dá erro se os dias de férias não forem um número
-- [ ] dá erro se os dias de férias forem maiores que 22
-- [ ] devolve o subsídio de férias
+- [x] recebe um salário
+- [x] recebe umas horas semanais
+- [x] recebe uns dias de férias
+- [x] dá erro se os dias de férias não forem um número
+- [x] dá erro se os dias de férias forem não-positivos
+- [x] dá erro se os dias de férias forem maiores que 22
+- [x] devolve o subsídio de férias
