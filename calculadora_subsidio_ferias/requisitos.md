@@ -10,14 +10,14 @@
 - [X] devolve o salário/hora
 
 ## Calcular o subsídio de férias diário
-- [ ] recebe um salário por hora
-- [ ] dá erro se o salário por hora não for um número
-- [ ] dá erro se o salário por hora for não-positivo
-- [ ] recebe umas horas semanais
-- [ ] dá erro se as horas semanais não forem um número
-- [ ] dá erro se as horas semanais forem não-positivas
-- [ ] dá erro se as horas semanas forem maiores que 7*24
-- [ ] devolve o subsídio de férias diário
+- [x] recebe um salário por hora
+- [x] dá erro se o salário por hora não for um número
+- [x] dá erro se o salário por hora for não-positivo
+- [x] recebe umas horas semanais
+- [x] dá erro se as horas semanais não forem um número
+- [x] dá erro se as horas semanais forem não-positivas
+- [x] dá erro se as horas semanas forem maiores que 7*24
+- [x] devolve o subsídio de férias diário
 
 ## Calcular o subsídio de férias
 - [ ] recebe um subsídio de férias diário
