@@ -56,18 +56,21 @@ def test_horas_semanais_167_is_less_or_equal_to_168():
 def test_salario_hora_calcula():
     salario = 1000
     horas_semanais = 40
-    
+
     salario_hora = (salario / horas_semanais) * (12 / 52)
     salario_hora_calculado = csf.salario_hora(1000, 40)
 
     assert salario_hora == salario_hora_calculado
-    
-#subsidio ferias diario    
-    
+
+
+# subsidio ferias diario
+
+
 def test_subsidio_ferias_diario_salario_nao_numero():
     with pytest.raises(TypeError):
         csf.subsidio_ferias_diario("a", 40)
-        
+
+
 def test_subsidio_ferias_diario_number_is_number():
     csf.subsidio_ferias_diario(1000, 40)
 
@@ -118,7 +121,7 @@ def test_subsidio_ferias_diario_calcula():
     salario_hora = 1000
     horas_semanais = 40
 
-    subsidio_ferias_diario = salario_hora * ((horas_semanais*52)/(12*22))
+    subsidio_ferias_diario = salario_hora * ((horas_semanais * 52) / (12 * 22))
     subsidio_ferias_diario_calculado = csf.subsidio_ferias_diario(1000, 40)
 
     assert subsidio_ferias_diario == subsidio_ferias_diario_calculado
