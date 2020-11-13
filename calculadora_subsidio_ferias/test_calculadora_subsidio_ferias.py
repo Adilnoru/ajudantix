@@ -3,10 +3,13 @@ import calculadora_subsidio_ferias as csf
 
 # verifica valor valido
 
+
 def test_verifica_valor_valido_float():
     csf.verifica_valor_valido(1.1, "Float")
 
+
 # salário hora
+
 
 def test_salario_hora_string_is_number():
     with pytest.raises(TypeError):
@@ -132,7 +135,9 @@ def test_subsidio_ferias_diario_calcula():
 
     assert subsidio_ferias_diario == subsidio_ferias_diario_calculado
 
+
 # subsidio de ferias
+
 
 def test_subsidio_ferias_dias_string_is_number():
     with pytest.raises(TypeError):
@@ -171,7 +176,9 @@ def test_subsidio_ferias_calcula():
     horas_semanais = 40
     dias_ferias = 22
 
-    subsidio_ferias = (((salario / horas_semanais) * (12 / 52)) * ((horas_semanais * 52) / (12 * 22))) * dias_ferias
+    subsidio_ferias = (
+        ((salario / horas_semanais) * (12 / 52)) * ((horas_semanais * 52) / (12 * 22))
+    ) * dias_ferias
     subsidio_ferias_calculado = csf.subsidio_ferias(1000, 40, 22)
 
     assert subsidio_ferias == subsidio_ferias_calculado
