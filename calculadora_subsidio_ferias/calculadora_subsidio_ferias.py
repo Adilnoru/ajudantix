@@ -14,3 +14,9 @@ def verifica_valor_valido(valor, nome, limite_superior=None):
             raise ValueError(
                 "O valor {} tem que ser menor que {}".format(nome, limite_superior)
             )
+
+
+def subsidio_ferias_diario(salario_hora, horas_semanais):
+    verifica_valor_valido(salario_hora, 'Salario Hora')
+    verifica_valor_valido(horas_semanais, 'Horas Semanais', 168)
+    return salario_hora * ((horas_semanais*52)/(12*22))
