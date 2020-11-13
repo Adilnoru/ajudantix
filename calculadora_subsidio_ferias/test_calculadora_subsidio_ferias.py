@@ -125,3 +125,47 @@ def test_subsidio_ferias_diario_calcula():
     subsidio_ferias_diario_calculado = csf.subsidio_ferias_diario(1000, 40)
 
     assert subsidio_ferias_diario == subsidio_ferias_diario_calculado
+
+# subsidio de ferias
+
+def test_subsidio_ferias_dias_string_is_number():
+    with pytest.raises(TypeError):
+        csf.subsidio_ferias_diario(1000, 40, "a")
+
+
+def test_subsidio_ferias_dias_number_is_number():
+    csf.subsidio_ferias_diario(1000, 40, 20)
+
+
+def test_subsidio_ferias_dias_negative_number_is_greater_than_zero():
+    with pytest.raises(ValueError):
+        csf.subsidio_ferias_diario(1000, 40, -2)
+
+
+def test_subsidio_ferias_dias_zero_is_greater_than_zero():
+    with pytest.raises(ValueError):
+        csf.subsidio_ferias_diario(1000, 40, 0)
+
+
+def test_subsidio_ferias_dias_23_is_less_or_equal_to_22():
+    with pytest.raises(ValueError):
+        csf.subsidio_ferias_diario(1000, 40, 23)
+
+
+def test_subsidio_ferias_dias_22_is_less_or_equal_to_22():
+    csf.subsidio_ferias_diario(1000, 40, 22)
+
+
+def test_subsidio_ferias_dias_21_is_less_or_equal_to_22():
+    csf.subsidio_ferias_diario(1000, 40, 21)
+
+
+def test_subsidio_ferias_calcula():
+    salario = 1000
+    horas_semanais = 40
+	dias_ferias = 22
+
+    subsidio_ferias = (((salario / horas_semanais) * (12 / 52)) * ((horas_semanais * 52) / (12 * 22))) * dias_ferias
+    subsidio_ferias_calculado = csf.subsidio_ferias(1000, 40, 22)
+
+    assert subsidio_ferias == subsidio_ferias_calculado
