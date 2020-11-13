@@ -5,3 +5,5 @@ Esta lista está obviamente incompleta e por agora serve essencialmente para eu 
 - [ ] Calculador do subsídio de férias
 - [ ] Calculador do subsídio de Natal
 - [ ] Simulador de IRS 2020
+- [ ] Calculador de salário líquido
+- [ ] Calculador de rendimento anual
