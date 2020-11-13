@@ -57,7 +57,7 @@ def test_salario_hora_calcula():
     salario = 1000
     horas_semanais = 40
 
-    salario_hora = (1000 / 40) * (12 / 52)
+    salario_hora = (salario / horas_semanais) * (12 / 52)
     salario_hora_calculado = csf.salario_hora(1000, 40)
 
     assert salario_hora == salario_hora_calculado
